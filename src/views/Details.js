@@ -1,5 +1,6 @@
 import * as Surplus from 'surplus';
 import { toggleEdit } from '../signals/router';
+import { pages } from '../signals/pages';
 
 export default () => (
   <div>
@@ -7,6 +8,18 @@ export default () => (
       <h2>Edit</h2>
     </a>
 
-    <h4>Details View</h4>
+    { pages.map(p => <Tile page={p} key={p.name()} />) }
   </div>
 );
+
+const Tile = ({ page }) => {
+  const { name, url, color } = page;
+  const col = color();
+
+  return (
+    <a href={url()} className='Tile' style={{ color: col, borderColor: col }}>
+      <br />
+      {name()}
+    </a>
+  );
+}

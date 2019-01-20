@@ -1,4 +1,5 @@
 import S from 's-js';
+import { savePages } from './pages';
 
 // components
 import Details from '../views/Details';
@@ -24,6 +25,7 @@ export const toggleEdit = () => {
     return;
   }
 
-  // nav from edit to home
+  // nav from edit to home, and commit all pages to browser storage
   location('/');
+  savePages();
 }
