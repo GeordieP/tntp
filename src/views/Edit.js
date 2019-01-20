@@ -1,6 +1,7 @@
 import * as Surplus from 'surplus';
 import { toggleEdit } from '../signals/router';
-import { pages, addPage, clearPages } from '../signals/pages';
+import { pages, addPage, deletePage, clearPages } from '../signals/pages';
+import data from 'surplus-mixin-data';
 
 const newPage = () => addPage('temp', 'https://google.ca', 'DodgerBlue');
 
@@ -21,18 +22,19 @@ export default () => (
 
     <br />
 
-    { pages.map(p => <Tile page={p} key={p.name()} />) }
+    { pages.map(p => <EditRow page={p} onDelete={() => deletePage(p)}/>) }
   </div>
 );
 
-const Tile = ({ page }) => {
+const EditRow = ({ page, onDelete }) => {
   const { name, url, color } = page;
-  const col = color();
 
   return (
-    <a href={url()} className='Tile' style={{ color: col, borderColor: col }}>
-      <br />
-      {name()}
-    </a>
+    <div>
+      <input type='text' placeholder='Name' fn={data(name)} />
+      <input type='text' placeholder='URL' fn={data(url)} />
+      <input type='text' placeholder='Color' fn={data(color)} />
+      <button onClick={onDelete}>Delete</button>
+    </div>
   );
 }

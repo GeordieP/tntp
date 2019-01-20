@@ -8,7 +8,7 @@ export default () => (
       <h2>Edit</h2>
     </a>
 
-    { pages.map(p => <Tile page={p} key={p.name()} />) }
+    { pages.map(p => <Tile page={p} key={p.url()} />) }
   </div>
 );
 
