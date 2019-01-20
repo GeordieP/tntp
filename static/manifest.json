@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "tntp",
+    "version": "2.0",
+    "description": "Tiled New Tab Page",
+    "icons": {
+        "48": "icons/48.png",
+        "64": "icons/64.png",
+        "96": "icons/96.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "permissions": ["storage"]
+}
