@@ -1,9 +1,10 @@
 import * as Surplus from 'surplus';
 import S from 's-js';
+import { Router } from './signals/router';
 
 const App = () => (
   <main>
-    <h1>App</h1>
+    <Router />
   </main>
 );
 
