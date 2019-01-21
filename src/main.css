@@ -14,3 +14,107 @@ a, a:visited {
   color: white;
   text-decoration: none;
 }
+
+input, button {
+  padding: 8px;
+  background: #1a1a1a;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 5px;
+  height: 30px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.u-flexH {
+  display: flex;
+  flex-direction: row;
+}
+
+.u-spaceBetween {
+  justify-content: space-between;
+}
+
+.ToggleEditBtn {
+  color: #2b2b2b;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.ToggleEditBtn.light {
+  color: #bbb;
+}
+
+.ToggleEditBtn:hover {
+  color: #fff;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 10% 0;
+}
+
+.View {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.EditView {
+  flex-direction: column;
+}
+
+.Tile {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 15px;
+  border-radius: 300px;
+  border: 2px solid gray;
+  opacity: 0.8;
+  width: 6vw;
+  height: 6vw;
+  min-height: 100px;
+  min-width: 100px;
+  max-height: 160px;
+  max-width: 160px;
+}
+
+.Tile:hover {
+  opacity: 1;
+}
+
+table, td input, td button {
+  width: 100%;
+}
+
+th {
+  color: #646464;
+  border-bottom: 1px solid #333;
+  padding-bottom: 3px;
+  font-size: 13pt;
+  margin: 5px 0;
+  text-align: left;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr) 1fr;
+  grid-gap: 5px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 760px) {
+  .View {
+    width: 70%;
+  }
+}
