@@ -26,8 +26,8 @@ storage.getPages().then(res => {
 // exports
 export { pages };
 export const addPage = (name, url, color) => pages.push(Page(name, url, color));
-export const deletePage = p => pages.remove(p);
-export const clearPages = () => pages([]);
+export const deletePage = p => confirm('Delete page?') ? pages.remove(p) : null;
+export const clearPages = () => confirm('Delete all pages?') ? pages([]) : null;
 export const savePages = () => storage.setPages(JSON.stringify(pages));
 
 // JSON functions below from Surplus TODOMVC example by github/adamhaile
