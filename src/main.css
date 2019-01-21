@@ -8,6 +8,7 @@ body {
   background: #222;
   color: white;
   font-size: 12pt;
+  font-family: sans-serif;
 }
 
 a, a:visited {
@@ -22,6 +23,9 @@ input, button {
   color: white;
   border-radius: 5px;
   height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
