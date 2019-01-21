@@ -1,4 +1,4 @@
-# tntp
+# tntp (v2)
 *(tiled new tab page)*
 
 A dead simple new tab replacement that displays web page links as a customizable grid of colored tiles.
