@@ -28,6 +28,13 @@ button {
   cursor: pointer;
 }
 
+input[type="color"] {
+	opacity: 0;
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+
 .u-flexH {
   display: flex;
   flex-direction: row;
@@ -37,11 +44,22 @@ button {
   justify-content: space-between;
 }
 
+.u-centerAll {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
 .ToggleEditBtn {
   color: #2b2b2b;
   position: absolute;
   left: 10px;
   top: 10px;
+}
+
+.u-noRightBorder {
+  border-radius: 5px 0 0 5px;
+  border-right: none;
 }
 
 .ToggleEditBtn.light {
@@ -78,7 +96,7 @@ main {
   align-content: center;
   align-items: center;
   margin: 15px;
-  border-radius: 300px;
+  border-radius: 8px;
   border: 2px solid gray;
   opacity: 0.8;
   width: 6vw;
@@ -111,6 +129,15 @@ tr {
   grid-template-columns: repeat(3, 3fr) 1fr;
   grid-gap: 5px;
   margin-bottom: 10px;
+}
+
+.ColorPicker {
+  outline: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #444;
+  border-left: none;
 }
 
 @media screen and (min-width: 760px) {

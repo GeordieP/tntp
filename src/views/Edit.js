@@ -37,6 +37,7 @@ export default () => (
 
 const EditRow = ({ page, onDelete }) => {
   const { name, url, color } = page;
+  const changeCol = e => color(e.target.value);
 
   return (
     <tr className='EditRow'>
@@ -46,8 +47,16 @@ const EditRow = ({ page, onDelete }) => {
       <td>
         <input type='text' placeholder='URL' fn={data(url)} />
       </td>
-      <td>
-        <input type='text' placeholder='Color' fn={data(color)} />
+      <td className='u-flexH u-centerAll'>
+        <input
+          type='text'
+          placeholder='Tile Color'
+          className='u-noRightBorder'
+          fn={data(color)}
+        />
+        <div className='ColorPicker' style={{ background: color() }}>
+          <input type='color' onChange={changeCol} />
+        </div>
       </td>
       <td>
         <button onClick={onDelete}>Delete</button>
