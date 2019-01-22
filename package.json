@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run clean && parcel watch src/index.html --no-autoinstall --no-hmr",
     "build": "npm run clean && parcel build src/index.html --no-source-maps",
+    "postbuild": "./zipper.sh",
     "clean": "rm -rf .cache/ dist/"
   },
   "dependencies": {

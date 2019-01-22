@@ -27,6 +27,8 @@ As this is an extension, hot reloading is not available, and we have to manually
 
 Run `yarn build` or `npm run build` to have Parcel generate a build in production mode. Like run, this will write its output files (including the `static/` directory) to `dist/`.
 
+As part of the build process, a .zip file is generated inside `dist/`. It will be named `tntp_VERSION.zip`, and is ready for uploading to browser extension stores.
+
 ##### Load Extension
 
 *NOTE:* These instructions are just for development. Check the 'Install' section above for directions on installing an official release.
